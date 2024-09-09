@@ -1,5 +1,5 @@
 import styled from 'styled-components'
 
-export const SobreStyle = styled.section`
+export const HomeStyle = styled.section`
     
 `
