@@ -10,7 +10,7 @@ import Home from './routes/Home.jsx'
 
 
 
-const router =()=> createBrowserRouter([
+const router = createBrowserRouter([
 {
 
   path:'/',element:<App/>,
@@ -19,7 +19,7 @@ const router =()=> createBrowserRouter([
   children:[
     {path:'/',element:<Home/>},
     {path:'/Sobre',element:<Sobre/>},
-    {path:'/Projetos',element:<Porjetos/>},
+    {path:'/Projetos',element:<Projetos/>},
   ]
 
 }
