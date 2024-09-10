@@ -4,3 +4,14 @@
 <i class="fi fi-rr-globe"></i>
 <i class="fi fi-rr-menu-burger"></i>
 <i class="fi fi-rr-download"></i>
+
+colors:
+
+#17252a	(23,37,42)
+#2b7a78	(43,122,120)
+#3aafa9	(58,175,169)
+#def2f1	(222,242,241)
+#feffff	(254,255,255)
+
+nomeie depois com o var!!
+
