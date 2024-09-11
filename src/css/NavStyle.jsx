@@ -7,8 +7,8 @@ export const NavStyle = styled.section`
     align-items:center ;
     justify-content: center;
     position: absolute;
-    width: clamp(24px,4vw,800px);
-    height: 80vh;
+    width: clamp(24px,8vh,800px);
+    height: 74vh;
     margin-top: clamp(80px, 12vh, 200px);
     margin-bottom: clamp(80px, 12vh, 200px);
     margin-left: clamp(30px,6vw,200px);
@@ -19,22 +19,31 @@ export const NavStyle = styled.section`
     display: flex;
     align-items: center;
     flex-direction:column;
+    margin-left:2vw;
 }
-i{
-    transition: 0.4s ease-in-out;
-    padding: 6vh;
+#hamb{
+    display: flex;
+    position: fixed;
+    margin-bottom: 60vh;
+    transition: 0.2s ease-in-out;
     font-size: clamp(12px,1vw,20px);
 }
-i:hover{
-    scale: 1.2;
+#hamb:hover{
+    scale: 1.1;
+}
+ul{
+    transition: 0.2s ease-in-out;
+    margin: 8vh 4vh 0vh 0vh;
+    font-size: clamp(12px,1vw,20px);
+    display: block;
+}
+ul:hover{
+    scale: 1.1;
+}
+li{
+    list-style: none;
+}
+.subdropright-menu{
 }
 
-@keyframes abrir {
-    from {
-        margin-right: 14vw;
-    }
-    to {
-        margin-right: 0;
-    }
-}
 `

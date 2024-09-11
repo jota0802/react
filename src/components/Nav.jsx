@@ -6,12 +6,26 @@ const Nav =()=>{
         <>
         <NavStyle>
             <div className="sidebar_container">
+                    <i id='hamb'className='hamb'class="fi fi-rr-menu-burger"></i>
                 <div className="sidebar">
-                    <i className='icons'class="fi fi-rr-menu-burger"></i>
-                    <i className='icons'class="fi fi-rr-home"></i>
-                    <i className='icons'class="fi fi-rr-user"></i>
-                    <i className='icons'class="fi fi-rr-globe"></i>
-                    <i className='icons'class="fi fi-rr-download"></i>
+                <li>
+                    
+                    <ul className="subdropright-menu">
+                        <i className='icons'class="fi fi-rr-home"></i> {/*Home*/}
+                    </ul>
+                    <ul className="subdropright-menu">
+                        <i className='icons'class="fi fi-rr-user"></i>  {/*Sobre*/}  
+                    </ul>
+                    <ul className="subdropright-menu">
+                        <i className='icons'class="fi fi-rr-globe"></i> {/*projetos*/}
+                    </ul>
+                    <ul className="subdropright-menu">
+                        <i className='icons'class="fi fi-rr-comment-alt"></i> {/*Contato*/}
+                    </ul>
+                    <ul className="subdropright-menu">
+                        <i className='icons'class="fi fi-rr-download"></i> {/*curriculo*/}
+                    </ul>
+                </li>
                 </div>
             </div>
         </NavStyle>
