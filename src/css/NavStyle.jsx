@@ -26,7 +26,6 @@ export const NavStyle = styled.section`
     margin: 8vh 4vh 0vh 0vh;
     padding: .2vw;
     font-size: clamp(12px,1vw,20px);
-    display: none;
 }
 #menu:hover{
     scale: 1.1;
@@ -39,7 +38,7 @@ export const NavStyle = styled.section`
     font-size: clamp(12px,1vw,20px);
 }
 
-#hamb:hover > #menu ul{   
+#hamb:focus > #menu{   
     display: block;
 }
 
