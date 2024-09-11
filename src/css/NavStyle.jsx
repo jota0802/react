@@ -21,6 +21,16 @@ export const NavStyle = styled.section`
     flex-direction:column;
     margin-left:2vw;
 }
+#menu{
+    transition: 0.2s ease-in-out;
+    margin: 8vh 4vh 0vh 0vh;
+    padding: .2vw;
+    font-size: clamp(12px,1vw,20px);
+    display: none;
+}
+#menu:hover{
+    scale: 1.1;
+}
 #hamb{
     display: flex;
     position: fixed;
@@ -28,22 +38,12 @@ export const NavStyle = styled.section`
     transition: 0.2s ease-in-out;
     font-size: clamp(12px,1vw,20px);
 }
-#hamb:hover{
-    scale: 1.1;
-}
-ul{
-    transition: 0.2s ease-in-out;
-    margin: 8vh 4vh 0vh 0vh;
-    font-size: clamp(12px,1vw,20px);
+
+#hamb:hover > #menu ul{   
     display: block;
 }
-ul:hover{
-    scale: 1.1;
-}
+
 li{
     list-style: none;
 }
-.subdropright-menu{
-}
-
 `

@@ -10,19 +10,19 @@ const Nav =()=>{
                 <div className="sidebar">
                 <li>
                     
-                    <ul className="subdropright-menu">
+                    <ul id="menu">
                         <i className='icons'class="fi fi-rr-home"></i> {/*Home*/}
                     </ul>
-                    <ul className="subdropright-menu">
+                    <ul id="menu">
                         <i className='icons'class="fi fi-rr-user"></i>  {/*Sobre*/}  
                     </ul>
-                    <ul className="subdropright-menu">
+                    <ul id="menu">
                         <i className='icons'class="fi fi-rr-globe"></i> {/*projetos*/}
                     </ul>
-                    <ul className="subdropright-menu">
+                    <ul id="menu">
                         <i className='icons'class="fi fi-rr-comment-alt"></i> {/*Contato*/}
                     </ul>
-                    <ul className="subdropright-menu">
+                    <ul id="menu">
                         <i className='icons'class="fi fi-rr-download"></i> {/*curriculo*/}
                     </ul>
                 </li>
