@@ -7,21 +7,34 @@ export const NavStyle = styled.section`
     align-items:center ;
     justify-content: center;
     position: absolute;
-    width: 4vw;
+    width: clamp(24px,4vw,800px);
     height: 80vh;
     margin-top: clamp(80px, 12vh, 200px);
     margin-bottom: clamp(80px, 12vh, 200px);
-    margin-left: clamp(30px,4vw,60px);
-    background-color: #2b7a78;
+    margin-left: clamp(30px,6vw,200px);
+    background-color: #3aafa9;
     border-radius: 2vw;
 }
 .sidebar{
     display: flex;
     align-items: center;
     flex-direction:column;
-
 }
 i{
+    transition: 0.4s ease-in-out;
     padding: 6vh;
+    font-size: clamp(12px,1vw,20px);
+}
+i:hover{
+    scale: 1.2;
+}
+
+@keyframes abrir {
+    from {
+        margin-right: 14vw;
+    }
+    to {
+        margin-right: 0;
+    }
 }
 `
