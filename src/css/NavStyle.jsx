@@ -37,12 +37,44 @@ export const NavStyle = styled.section`
     transition: 0.2s ease-in-out;
     font-size: clamp(12px,1vw,20px);
 }
-
-#hamb:focus > #menu{   
-    display: block; //resolver isso!!!
+#hamb:focus{
+    outline: none;
 }
-
 li{
     list-style: none;
 }
+
+
+//---------------- animacoes ----------------------------
+//abrir
+
+.sidebar_container.open{
+    
+}
+.sidebar.open{
+    
+}
+#menu.open{
+    
+}
+@keyframes abrir{
+
+}
+
+//fechar
+
+.sidebar_container.close{
+    
+}
+.sidebar.open.close{
+    
+}
+#menu.open.close{
+    
+}
+@keyframes fechar{
+
+}
+
+
 `
