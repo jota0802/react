@@ -1,11 +1,10 @@
 import { NavStyle } from "../css/NavStyle";
-import { Link } from "react-router-dom";
 
 const Nav =()=>{
     return(
         <>
         <NavStyle>
-            <div className="sidebar_container">
+        <div className="sidebar_container">
                     <i id='hamb'className='hamb'class="fi fi-rr-menu-burger"></i>
                 <div className="sidebar">
                 <li>
