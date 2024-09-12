@@ -39,7 +39,7 @@ export const NavStyle = styled.section`
 }
 
 #hamb:focus > #menu{   
-    display: block;
+    display: block; //resolver isso!!!
 }
 
 li{
