@@ -8,7 +8,7 @@ export const NavStyle = styled.section`
     justify-content: center;
     position: absolute;
     width: clamp(24px,8vh,800px);
-    height: 74vh;
+    height: 8vh; //mudando para de 74 para 8
     margin-top: clamp(80px, 12vh, 200px);
     margin-bottom: clamp(80px, 12vh, 200px);
     margin-left: clamp(30px,6vw,200px);
@@ -20,6 +20,7 @@ export const NavStyle = styled.section`
     align-items: center;
     flex-direction:column;
     margin-left:2vw;
+    display: none; //display block --> none
 }
 #menu{
     transition: 0.2s ease-in-out;
@@ -33,36 +34,55 @@ export const NavStyle = styled.section`
 #hamb{
     display: flex;
     position: fixed;
-    margin-bottom: 60vh;
-    transition: 0.2s ease-in-out;
+    // margin-bottom: 60vh; ---------comentado
+    transition: 0.6s ease-in-out;
     font-size: clamp(12px,1vw,20px);
 }
-#hamb:focus{
-    outline: none;
+#hamb:hover{
+    scale: 1.2;
 }
 li{
     list-style: none;
 }
 
 
-//---------------- animacoes ----------------------------
+//---------------- animacoes ----------------------------//
 //abrir
 
+@keyframes abrir{
+    0%{
+        height: 0vh;
+    }
+    100%{
+        height: 74vh;
+    }
+}
+@keyframes fixar{
+    100%{
+
+    }
+}
 .sidebar_container.open{
-    
+
 }
 .sidebar.open{
-    
+
 }
 #menu.open{
     
 }
-@keyframes abrir{
-
+#hamb.open{
+    margin-bottom: 60vh;
 }
 
 //fechar
 
+@keyframes fechar{
+
+}
+@keyframes desfixar{
+    
+}
 .sidebar_container.close{
     
 }
@@ -72,9 +92,8 @@ li{
 #menu.open.close{
     
 }
-@keyframes fechar{
-
+#hamb.close{
+    
 }
-
 
 `
