@@ -21,19 +21,19 @@ const Nav =()=>{
 
                 <div className={`sidebar ${Expandir ? 'expand' : ''}`} id="sidebar">
                     <li>
-                        <ul id="menu">
+                        <ul className={`menu ${Expandir ? 'expand' : ''}`}>
                             <i className="icons fi fi-rr-home"></i> {/* Home */}
                         </ul>
-                        <ul id="menu">
+                        <ul className={`menu ${Expandir ? 'expand' : ''}`}>
                             <i className="icons fi fi-rr-user"></i>  {/* Sobre */}  
                         </ul>
-                        <ul id="menu">
+                        <ul className={`menu ${Expandir ? 'expand' : ''}`}>
                             <i className="icons fi fi-rr-globe"></i> {/* Projetos */}
                         </ul>
-                        <ul id="menu">
+                        <ul className={`menu ${Expandir ? 'expand' : ''}`}>
                             <i className="icons fi fi-rr-comment-alt"></i> {/* Contato */}
                         </ul>
-                        <ul id="menu">
+                        <ul className={`menu ${Expandir ? 'expand' : ''}`}>
                             <i className="icons fi fi-rr-download"></i> {/* Currículo */}
                         </ul>
                     </li>

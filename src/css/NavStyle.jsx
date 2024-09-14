@@ -5,7 +5,7 @@ export const NavStyle = styled.section`
 width: 100%;
 
 .sidebar_container {
-    z-index: 2;
+    z-index: 3;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,34 +26,38 @@ width: 100%;
 }
 
 .sidebar {
+    z-index: 3;
     display: flex;
-    display: none;
     justify-content: end;
     flex-direction: column;
+    margin-top: 12vh;
     margin-left: 4vh;
     transition: all 0.1s ease;
     color: transparent;
 }
 
 .sidebar.expand {
+    margin-top: 0;
     display: flex;
     color: black;
 }
 
-#menu {
-    z-index: 5;
-    transition: 0.4s ease;
-    margin: 8vh 4vh 0vh 0vh;
+.menu {
+    z-index: 2;
+    transition: 0.3s ease;
+    margin-right: 4vh;
     padding: 0.2vw;
     font-size: clamp(12px, 1vw, 20px);
 }
-
-#menu:hover {
+.menu.expand{
+    margin: 8vh 4vh 0vh 0vh;
+}
+.menu:hover {
     scale: 1.1;
 }
 
 #hamb {
-    z-index: 3;
+    z-index: 4;
     display: flex;
     position: fixed;
     font-size: clamp(12px, 1vw, 20px);
