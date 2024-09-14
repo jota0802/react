@@ -1,99 +1,75 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const NavStyle = styled.section`
-    width: 100%;
-.sidebar_container{
-    display: flex;
-    align-items:center ;
-    justify-content: center;
-    position: absolute;
-    width: clamp(24px,8vh,800px);
-    height: 8vh; //mudando para de 74 para 8
-    margin-top: clamp(80px, 12vh, 200px);
-    margin-bottom: clamp(80px, 12vh, 200px);
-    margin-left: clamp(30px,6vw,200px);
-    background-color: #3aafa9;
-    border-radius: 2vw;
-}
-.sidebar{
+
+width: 100%;
+
+.sidebar_container {
+    z-index: 2;
     display: flex;
     align-items: center;
-    flex-direction:column;
-    margin-left:2vw;
-    display: none; //display block --> none
+    justify-content: center;
+    position: absolute;
+    width: clamp(24px, 8vh, 800px);
+    height: 8vh;
+    margin-top: clamp(80px, 14vh, 200px);
+    margin-bottom: clamp(80px, 12vh, 200px);
+    margin-left: clamp(30px, 6vw, 200px);
+    background-color: #3aafa9;
+    border-radius: 2vw;
+    transition: all 0.6s ease;
 }
-#menu{
-    transition: 0.2s ease-in-out;
+
+.sidebar_container.expanded {
+    height: 74vh;
+    width: clamp(20px,8vh,80px);
+}
+
+.sidebar {
+    display: flex;
+    display: none;
+    justify-content: end;
+    flex-direction: column;
+    margin-left: 4vh;
+    transition: all 0.1s ease;
+    color: transparent;
+}
+
+.sidebar.expand {
+    display: flex;
+    color: black;
+}
+
+#menu {
+    z-index: 5;
+    transition: 0.4s ease;
     margin: 8vh 4vh 0vh 0vh;
-    padding: .2vw;
-    font-size: clamp(12px,1vw,20px);
+    padding: 0.2vw;
+    font-size: clamp(12px, 1vw, 20px);
 }
-#menu:hover{
+
+#menu:hover {
     scale: 1.1;
 }
-#hamb{
+
+#hamb {
+    z-index: 3;
     display: flex;
     position: fixed;
-    // margin-bottom: 60vh; ---------comentado
-    transition: 0.6s ease-in-out;
-    font-size: clamp(12px,1vw,20px);
+    font-size: clamp(12px, 1vw, 20px);
+    transition: all 0.6s ease;
+    cursor: pointer;
 }
-#hamb:hover{
+
+#hamb:hover {
     scale: 1.2;
 }
-li{
-    list-style: none;
-}
 
-
-//---------------- animacoes ----------------------------//
-//abrir
-
-@keyframes abrir{
-    0%{
-        height: 0vh;
-    }
-    100%{
-        height: 74vh;
-    }
-}
-@keyframes fixar{
-    100%{
-
-    }
-}
-.sidebar_container.open{
-
-}
-.sidebar.open{
-
-}
-#menu.open{
-    
-}
-#hamb.open{
+#hamb.expanded {
     margin-bottom: 60vh;
 }
 
-//fechar
-
-@keyframes fechar{
-
+li {
+    list-style: none;
 }
-@keyframes desfixar{
-    
-}
-.sidebar_container.close{
-    
-}
-.sidebar.open.close{
-    
-}
-#menu.open.close{
-    
-}
-#hamb.close{
-    
-}
-
 `
