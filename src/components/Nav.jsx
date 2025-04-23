@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { NavStyle } from "../css/NavStyle";
+import { Link } from 'react-router-dom';
+import logo from "../assets/Fomrula-E-Logo.png";
 
 const Nav =()=>{
-    
+
     const [Expandir, setExpandir] = useState(false);
 
     // Função para alternar o estado expandido
@@ -12,37 +14,46 @@ const Nav =()=>{
 
     return(
         <NavStyle>
-            <div className={`sidebar_container ${Expandir ? 'expanded' : ''}`}> {/*? baseado no valor de Expandir (true : false) atribue uma nome a sidebar_conatiner */} 
-                <i
-                    id="hamb"
-                    className={`hamb fi fi-rr-menu-burger ${Expandir ? 'expanded' : ''}`}
-                    onClick={toggleMenu} // Chama a função ao clicar
-                ></i>
 
-                <div className={`sidebar ${Expandir ? 'expand' : ''}`} id="sidebar">
-                    <li>
-                        <ul className={`menu ${Expandir ? 'expand' : ''}`}>
-                            <i className="icons fi fi-rr-home"></i> {/* Home */}
-                        </ul>
-                        <ul className={`menu ${Expandir ? 'expand' : ''}`}>
-                            <i className="icons fi fi-rr-user"></i>  {/* Sobre */}  
-                        </ul>
-                        <ul className={`menu ${Expandir ? 'expand' : ''}`}>
-                            <i className="icons fi fi-rr-globe"></i> {/* Projetos */}
-                        </ul>
-                        <ul className={`menu ${Expandir ? 'expand' : ''}`}>
-                            <i className="icons fi fi-rr-comment-alt"></i> {/* Contato */}
-                        </ul>
-                        <ul className={`menu ${Expandir ? 'expand' : ''}`}>
-                            <i className="icons fi fi-rr-download"></i> {/* Currículo */}
-                        </ul>
-                    </li>
-                </div>
-            </div>
+            {/*Menu Hamburguer*/}
+
+            <nav className='nav'>
+                <div className={`sidebar_container ${Expandir ? 'expanded' : ''}`}> {/*? baseado no valor de Expandir (true : false) atribue uma nome a sidebar_conatiner */} 
+                    <img
+                        id="hamb"
+                        src={logo}
+                        className={`hamb ${Expandir ? 'expanded' : ''}`}
+                        onClick={toggleMenu} // Chama a função ao clicar
+                        ></img>
+                    <div className={`sidebar ${Expandir ? 'expand' : ''}`} id="sidebar">
+                        <li>
+                            <ul className={`menu ${Expandir ? 'expand' : ''}`}>
+                                <Link to='/'>Home</Link>
+                            </ul>
+                            <ul className={`menu ${Expandir ? 'expand' : ''}`}>
+                                <Link to='/Circuits'>Pistas</Link>
+                            </ul>
+                            <ul className={`menu ${Expandir ? 'expand' : ''}`}>
+                                <Link to='/Races'>Corridas</Link>
+                            </ul>
+                            <ul className={`menu ${Expandir ? 'expand' : ''}`}>
+                                <Link to='/Pilots'>Pilotos</Link>
+                            </ul>
+                            <ul className={`menu ${Expandir ? 'expand' : ''}`}>
+                                <Link to='/Teams'>Equipes</Link>
+                            </ul>
+                            <ul className={`menu ${Expandir ? 'expand' : ''}`}>
+                                <Link to='/Login'>Login</Link>
+                            </ul>
+                        </li>
+                    </div>
+                </div> 
+
+
+
+
+            </nav>
         </NavStyle>
     )
 }
 export default Nav
-
-
-
